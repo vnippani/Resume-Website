@@ -1,0 +1,16 @@
+{% extends 'rWebsite/base.html' %} <!-- links to base template -->
+{% block content %}
+<div class="row py-md-2 justify-content-center">
+	<img src="{{ project.image.url }}">
+</div>
+<br>
+<div class="row py-md-1 justify-content-center">
+	<h1>{{ project.title }}</h1>
+</div>
+<div class="row py-md-1 justify-content-center">
+	<h2>{{ project.description }}</h2>
+</div>
+<div class="row py-md-2 justify-content-center">
+	<p>{{ project.full_info }}</p>
+</div>
+{% endblock %}

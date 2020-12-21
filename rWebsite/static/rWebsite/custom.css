@@ -1,0 +1,18 @@
+#topNav {
+    background-color: #16A085;
+}
+
+#bodyS {
+    font-family: 'Lato', sans-serif;
+    background-color: #FCF3CF;
+}
+
+
+@media (min-width: 992px) {
+    #hometext {
+        font-size: 4rem;
+    }
+    #blogdetailtitle {
+        font-size: 5rem;
+    }
+}

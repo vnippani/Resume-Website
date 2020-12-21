@@ -1,0 +1,37 @@
+
+{% extends 'rWebsite/base.html' %} <!-- links to base template -->
+{% load static %}
+{% block content %} <!-- marks part of content that should belong to block  -->
+<div class="row py-md-2 justify-content-center">
+	<img src="{% static 'rWebsite/vineetImage2.PNG' %}" class="vineetFace"><br>
+</div>
+
+<div class="row py-md-3 justify-content-center">
+	<h2>Vineet Nippani</h2>
+	<p>Hello! I am a student in the Electrical and Computer Engineering Department at the University of Texas at Austin. My objective is to gain experience in the worlds of software engineering and data science.</p>
+	<p>I am experienced in Python, Java, C++, VHDL, MATLAB, Linux, Git/Github, ARM Assembly Language and embedded microcontroller programming. I also have strong leadership and interpersonal skills and experience with project documentation.</p>
+
+</div>
+
+<div class="container">
+  <div class="row">
+    
+  	{% for project in projects %}
+  	<div class="col-4 py-md-2">
+  	
+	  	<div class="card">
+	  		<a href="{% url 'detail' project.id %}">
+		    	<img src="{{ project.image.url }}" class="card-img-top">
+			</a>
+			  <div class="card-body">
+			    <h5 class="card-title">{{ project.title }}</h5>
+			    <p class="card-text">{{ project.description }}</p>
+			  </div>
+		</div>
+	</div>
+  	{% endfor %}
+    
+  </div>
+</div>
+
+{% endblock %}
