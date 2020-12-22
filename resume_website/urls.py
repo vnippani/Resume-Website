@@ -25,5 +25,4 @@ urlpatterns = [
 	path('', views.home, name="home"),
 	path('project/<int:proj_id>/', views.detail, name='detail'), #each project gets its own page
 ]
-
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

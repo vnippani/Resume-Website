@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'r@@voe2c+j%f^en@43-)ty7v6dwmqvk9aep36w41o7p(ynj@_c'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['vnippani.pythonanywhere.com']
 
 
 # Application definition
@@ -117,8 +117,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-
-STATIC_URL = '/static/'
-
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR , 'media') #add media to the base directory
+MEDIA_ROOT = '/home/vnippani/Resume-Website/media/'
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR , 'static') #folder in base directory called static shows this
